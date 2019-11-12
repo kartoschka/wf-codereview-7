@@ -1,0 +1,14 @@
+<div class=travel-form>
+  <h4>Add/edit travel information</h4>
+  <form [formGroup]="this.travelsService.form" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="$key">
+    <div class=form-grid>
+      <div>Title</div><input formControlName="title">
+      <div>Locations</div><input formControlName="locations">
+      <div>Description</div><input formControlName="description">
+      <!-- <div>Image: <input formControlName="img" type="file" accept="image/*"></div> -->
+    </div>
+    <input type=submit value=Submit>
+  </form>
+  <button (click)="travelsService.resetForm()">Reset Form</button>
+</div>

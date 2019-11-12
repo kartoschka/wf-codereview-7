@@ -1,0 +1,14 @@
+<div class=travels-box>
+  <ng-container *ngFor="let travel of travelsAry">
+    <button (click)="travelsService.deleteTravel(travel.$key)">X</button>
+    <button (click)="travelsService.populateForm(travel)">Edit</button>
+    <div class=item>
+      <h4>{{travel.title}}</h4>
+      <div class=item-info>
+        <p>{{travel.locations}}</p>
+        <p>{{travel.description}}</p>
+        <!-- <img src="{{travel.img}}" style="width:150px;"> -->
+      </div>
+    </div>
+  </ng-container>
+</div>
