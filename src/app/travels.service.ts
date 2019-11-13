@@ -15,7 +15,6 @@ export class TravelsService {
     title: new FormControl("", Validators.required),
     locations: new FormControl("", Validators.required),
     description: new FormControl("", Validators.required),
-    /* img: new FormControl("", Validators.required) */
   })
 
   getTravels() {
@@ -28,7 +27,6 @@ export class TravelsService {
       title: travel.title,
       locations: travel.locations,
       description: travel.description,
-      /* img: travel.img */
     })
   }
 
